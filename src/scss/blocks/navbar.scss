@@ -1,0 +1,69 @@
+@use '../utils/variables.scss' as *;
+@use '../utils/mixins.scss' as *;
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $primary-color;
+    padding: 20px;
+    @include flex-center();
+    transition: all 0.3s;
+
+    &.shrink {
+        padding: 10px;
+    }
+}
+
+.logo {
+    color: $text-color;
+}
+
+.nav-links {
+    list-style: none;
+    @include flex-center();
+
+    li {
+        margin: 0 15px;
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    }
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    div {
+        width: 25px;
+        height: 3px;
+        background: $text-color;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: $primary-color;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .burger {
+        display: flex;
+    }
+}
