@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محفظة أعمالي</title>
+    <link rel="stylesheet" href="../dist/main.css">
+</head>
+<body>
+    <!-- الهيدر (شريط التنقل) -->
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">اسمي</h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#projects" class="header__link">المشاريع</a></li>
+                    <li class="header__item"><a href="#skills" class="header__link">المهارات</a></li>
+                    <li class="header__item"><a href="#resume" class="header__link">السيرة الذاتية</a></li>
+                    <li class="header__item"><a href="#contact" class="header__link">اتصل بي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- قسم المقدمة -->
+    <section class="intro-banner">
+        <div class="intro-banner__content">
+            <img src="src/img/profile.jpg" alt="صورتي" class="intro-banner__image">
+            <div class="intro-banner__text">
+                <h2 class="intro-banner__title">مرحبًا، أنا [اسمك]!</h2>
+                <p class="intro-banner__description">أنا مطور ويب متخصص في إنشاء مواقع حديثة ومتجاوبة.</p>
+                <div class="intro-banner__buttons">
+                    <a href="#contact" class="btn btn--primary">تواصل معي</a>
+                    <a href="#projects" class="btn btn--secondary">عرض مشاريعي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم المشاريع الحديثة -->
+    <section class="latest-projects" id="projects">
+        <h2 class="latest-projects__title">أحدث المشاريع</h2>
+        <div class="latest-projects__grid">
+            <div class="project-card">
+                <img src="src/img/project1.jpg" alt="مشروع 1" class="project-card__image">
+                <h3 class="project-card__title">مشروع 1</h3>
+                <p class="project-card__description">وصف قصير عن المشروع.</p>
+            </div>
+            <div class="project-card">
+                <img src="src/img/project2.jpg" alt="مشروع 2" class="project-card__image">
+                <h3 class="project-card__title">مشروع 2</h3>
+                <p class="project-card__description">وصف قصير عن المشروع.</p>
+            </div>
+            <div class="project-card">
+                <img src="src/img/project3.jpg" alt="مشروع 3" class="project-card__image">
+                <h3 class="project-card__title">مشروع 3</h3>
+                <p class="project-card__description">وصف قصير عن المشروع.</p>
+            </div>
+        </div>
+        <a href="#all-projects" class="btn btn--primary">عرض جميع المشاريع</a>
+    </section>
+    
+    <!-- الفوتر -->
+    <footer class="footer">
+        <p class="footer__text">&copy; [اسمك] 2025 - جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            let header = document.querySelector(".header");
+            header.classList.toggle("header--shrink", window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
