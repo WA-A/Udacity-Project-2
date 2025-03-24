@@ -73,5 +73,45 @@ body {
     display: flex;
   }
 }
+.about-section {
+  background: #eabdbd;
+  color: #000;
+  padding: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.about-text {
+  margin-left: 50px;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 36px;
+}
+
+.about-text .highlight {
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
