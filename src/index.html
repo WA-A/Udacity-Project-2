@@ -10,7 +10,7 @@
     <nav class="navbar" id="navbar">
         <h2 style="color: white;">WA-A</h2>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#biography">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#projects">My Latest Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -22,17 +22,21 @@
     </nav>
 
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-container">
-           
+            <div class="about-image">
+                <img src="./img/myphoto.jpg" alt="Profile Image">
+            </div>
             <div class="about-text">
-                <p><span class="highlight">Hi, My name is Geek101 !!</span></p>
-                <p>I am a B.Tech Final Year Student of XYZ College, Pursuing My Degree in XYZ. I have a keen Interest in Problem Solving and Finding new and Dynamic Ideas.</p>
-                <p>I am a Machine Learning Enthusiast & Front-end Web Developer. I can provide clean code and pixel perfect design.</p>
+                <h3 class="highlight"> Wasan Awwad - Junior Full Stack .</h3>
+                <p>Hi, My name is Wasan Awwad I am a computer engineer, a full stack junior. I have several skills in several frameworks,
+                 as well as programm solving and soft skills. I love learning, building several projects, and developing myself continuously.</p>
                
             </div>
         </div>
     </section>
+
+    
 
 
     <script>
@@ -51,6 +55,20 @@
         burger.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 50,
+                behavior: "smooth"
+            });
+        }
+    });
+});
     </script>
 </body>
 </html>
